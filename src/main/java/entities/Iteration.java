@@ -28,7 +28,7 @@ public class Iteration {
         }
         Duration result = Duration.ofDays(0);
         for(Activity a : activities){
-            result.plus(a.getDuration());
+            result = result.plus(a.getDuration());
         }
         return result;
     }

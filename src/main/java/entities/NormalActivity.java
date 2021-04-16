@@ -20,12 +20,13 @@ public class NormalActivity extends Activity {
 
     @Override
     public Duration getDuration() throws SabanaResearchException {
-        if (steps==null){
+        if (steps.size()==0){
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_NORMAL_ACTIVITY);
         }
         Duration duration = Duration.ofDays(0);
         for(Step s: steps){
-            duration = duration.plus(s.getDuration());
+            if (super.isActive())
+            duration = duration.plusDays(s.getDuration().toDays());
         }
         return duration;
     }

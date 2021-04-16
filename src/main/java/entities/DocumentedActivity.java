@@ -28,10 +28,10 @@ public class DocumentedActivity extends Activity {
         if (questions.size() ==0){
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_DOCUMENTED_ACTIVITY);
         }
-        result.plus(activity.getDuration());
+        result = (activity.getDuration());
 
         for(Question l: questions){
-            result.plus(l.getDedication());
+            result = result.plus(l.getDedication());
         }
 
         return result;
