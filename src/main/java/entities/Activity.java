@@ -12,7 +12,7 @@ public abstract class Activity {
     private String name;
     private String state;
     private Iteration iteration;
-    private int estimatedDuration;
+
 
     public Activity(String name, String state, Iteration iteration) {
         this.name = name;
@@ -38,6 +38,6 @@ public abstract class Activity {
      *
      * @return
      */
-    public abstract Duration getDuration();
+    public abstract Duration getDuration() throws SabanaResearchException;
 
 }

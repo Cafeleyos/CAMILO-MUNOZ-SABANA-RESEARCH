@@ -1,6 +1,7 @@
 package entities;
 
 import java.time.Duration;
+import java.time.temporal.Temporal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,10 +19,14 @@ public class NormalActivity extends Activity {
     }
 
     @Override
-    public Duration getDuration() {
-        Duration duration = Duration
-        for(Step s: steps){
-            s.getDuration();
+    public Duration getDuration() throws SabanaResearchException {
+        if (steps==null){
+            throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_NORMAL_ACTIVITY);
         }
+        Duration duration = Duration.ofDays(0);
+        for(Step s: steps){
+            duration = duration.plus(s.getDuration());
+        }
+        return duration;
     }
 }

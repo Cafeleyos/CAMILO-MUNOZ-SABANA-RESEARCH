@@ -22,12 +22,15 @@ public class Iteration {
         this.activities.add(activity);
     }
 
-    public Duration getDuration(){
+    public Duration getDuration() throws SabanaResearchException {
+        if(activities.size()==0){
+            throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_ITERATION);
+        }
         Duration result = Duration.ofDays(0);
         for(Activity a : activities){
-            result += a.getDuration();
+            result.plus(a.getDuration());
         }
-        return Duration.ofDays(1);
+        return result;
     }
 
 }
