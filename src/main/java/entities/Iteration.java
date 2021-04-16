@@ -1,5 +1,6 @@
 package entities;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +20,14 @@ public class Iteration {
 
     public void addActivity(Activity activity) {
         this.activities.add(activity);
+    }
+
+    public Duration getDuration(){
+        Duration result = Duration.ofDays(0);
+        for(Activity a : activities){
+            result += a.getDuration();
+        }
+        return Duration.ofDays(1);
     }
 
 }

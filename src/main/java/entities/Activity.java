@@ -12,6 +12,7 @@ public abstract class Activity {
     private String name;
     private String state;
     private Iteration iteration;
+    private int estimatedDuration;
 
     public Activity(String name, String state, Iteration iteration) {
         this.name = name;
@@ -29,7 +30,7 @@ public abstract class Activity {
      * @return true if the activity is in state pending or active, otherwise return false.
      */
     public boolean isActive() {
-        return false;
+        return this.state.equals(ACTIVE_STATE);
     }
 
     /**

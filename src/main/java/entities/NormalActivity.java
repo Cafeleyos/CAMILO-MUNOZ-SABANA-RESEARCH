@@ -7,7 +7,7 @@ import java.util.List;
 public class NormalActivity extends Activity {
 
     private List<Step> steps;
-
+    private Duration duration;
     public NormalActivity(String name, String state, Iteration iteration) {
         super(name, state, iteration);
         this.steps = new ArrayList<>();
@@ -19,6 +19,9 @@ public class NormalActivity extends Activity {
 
     @Override
     public Duration getDuration() {
-        return null;
+        Duration duration = Duration
+        for(Step s: steps){
+            s.getDuration();
+        }
     }
 }
