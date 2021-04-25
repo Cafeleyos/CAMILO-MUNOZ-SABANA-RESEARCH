@@ -21,20 +21,24 @@ public class DocumentedActivity extends Activity {
 
     @Override
     public Duration getDuration() throws SabanaResearchException {
-        if (activity ==null){
+        if (activity == null) {
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_DOCUMENTED_ACTIVITY_WITHOUT_NORMAL_QUESTION);
         }
-        if (questions.isEmpty()){
+        if (questions.isEmpty()) {
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_DOCUMENTED_ACTIVITY);
         }
-        Duration result;
-        result = (activity.getDuration());
+        Duration result = Duration.ZERO;
+        if (activity.stateValidation(Activity.ACTIVE_STATE)) {
+            result = (activity.getDuration());
 
-        for(Question l: questions){
-            result = result.plus(l.getDedication());
+            for (Question l : questions) {
+                result = result.plus(l.getDedication());
+            }
         }
-
         return result;
+    }
 
+    public boolean stateValidation(String state) {
+        return activity.stateValidation(state);
     }
 }

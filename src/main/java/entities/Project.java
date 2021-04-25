@@ -36,6 +36,13 @@ public class Project {
     public void addIteration(Iteration iteration) {
         this.iterations.add(iteration);
     }
+    public void setDateInit(LocalDate dateInit) {
+        this.dateInit = dateInit;
+    }
+
+    public void setDateEnd(LocalDate dateEnd) {
+        this.dateEnd = dateEnd;
+    }
 
     public void setSynthesizer(ISynthesizer s){
         this.synthesizer = s;
@@ -57,6 +64,22 @@ public class Project {
             System.out.println(key + "---" +synthesizer.synthesize(this).get(key));
         }
         return synthesizer.synthesize(this);
+    }
+
+    public boolean state(String state) {
+        int counter =0;
+
+        if (dateEnd.isBefore(SabanaResearch.today)){
+            return false;
+        }
+
+        for (Iteration i: iterations) {
+            counter = +i.countActivities(state);
+            if (counter != 0) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public List<Iteration> getIterations() {

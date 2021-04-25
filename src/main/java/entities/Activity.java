@@ -24,14 +24,6 @@ public abstract class Activity {
         }
     }
 
-    /**
-     * Evaluate if an activity is active.
-     *
-     * @return true if the activity is in state pending or active, otherwise return false.
-     */
-    public boolean isActive() {
-        return this.state.equals(ACTIVE_STATE);
-    }
 
     /**
      * Get the duration of the activity.
@@ -40,4 +32,5 @@ public abstract class Activity {
      */
     public abstract Duration getDuration() throws SabanaResearchException;
 
+    public abstract boolean stateValidation(String state);
 }

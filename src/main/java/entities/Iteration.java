@@ -36,4 +36,14 @@ public class Iteration {
     public String getGoal() {
         return this.goal;
     }
+    public int countActivities(String state) {
+        int counter = 0;
+        for (Activity A: activities) {
+            if (A.stateValidation(state)) {
+                counter++;
+            }
+
+        }
+        return counter;
+    }
 }

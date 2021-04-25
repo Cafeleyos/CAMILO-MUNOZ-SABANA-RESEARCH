@@ -17,4 +17,13 @@ public class Group {
         this.projects.add(plan);
     }
 
+    public int countProjectsState(String state) {
+        int result = 0;
+        for(Project p : projects) {
+            if (p.state(state)){
+                result++;
+            }
+        }
+        return result;
+    }
 }
