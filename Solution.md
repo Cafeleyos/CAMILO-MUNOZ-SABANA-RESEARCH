@@ -25,9 +25,9 @@ Esto, en resumen, permite que un método heredado sea modificado para cambiar pa
 
 
 ###Diagramas de secuencia
-![](img/1.png);
-![](img/2.png);
-![](img/3.png);
+![](img/1.png)
+![](img/2.png)
+![](img/3.png)
 ###Diagrama de clases
-![](img/4.png);
+![](img/4.png)
 
