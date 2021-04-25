@@ -31,3 +31,20 @@ Esto, en resumen, permite que un método heredado sea modificado para cambiar pa
 ###Diagrama de clases
 ![](img/4.png)
 
+##Extendiendo
+![](img/5.png)
+
++ Se debería cambiar el método `getDuration()` para las 
+clases que heredan de Activity. Esto con el objetivo de considerar los tiempos de las dependencias.
+
+* No se debería cambiar el funcionamiento del método `synthesize()` ya que este funcionaría con el único cambio del 
+`getDuration()`. Además, el método `summarize()` tampoco tendría que cambiarse dado que este no depende 
+  directamente de la duración. 
+  
+Teniendo en cuenta esto, se podría decir que en general el diseño fue bueno dado que 
+permitiría realizar el cambio planteado de una manera sencilla sin generar una dispersión de 
+errores. Lo que si podría mejorarse es el encapsulamiento de la clase Project, ya que al sintetizar brinda
+la clase completa y no los arreglos necesarios. 
+
+##Evidencias Bono
+
