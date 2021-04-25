@@ -1,4 +1,4 @@
-#Solución del parcial 
+#Solución segundo  parcial 
 
 ##Conceptos
 ###¿Cuáles son las acciones los tres momentos importantes de las excepciones? ¿Cuál es el objetivo de cada una? ¿Cómo se implementa en Java cada acción?.
@@ -9,11 +9,25 @@ La sobre escritura de métodos es un aspecto muy importante que aplica en el con
 Esto, en resumen, permite que un método heredado sea modificado para cambiar parcial o completamente su comportamiento dependiendo de lo requerido. Para realizarlo, simplemente se escribe el encabezado del método a modificar de igual manera en la clase hija y se recomienda colocar una etiqueta de @Override. En caso contrario, donde no deseemos permitir que algún método se sobre escriba utilizaremos la palabra final que evitara este comportamiento. 
 
 ##Diseñando 
+1. El método summarize de la clase project llama al sintetizador para que realize el resumen e imprime los valores devueltos.
+   
+`public HashMap<String, Duration> summarize()`
+   * Devuelve: HashMap con el resumen requerido. 
+2. El método synthesize en la clase StudentSynthesizer devuelve la información del tiempo invertido por cada estudiante en el proyecto.
 
-El método summarize en la clase StudentSynthesizer resume la información del tiempo invertido por cada estudiante en el proyecto imprimiendo 
-el nombre y el tiempo trabajado de cada uno de ellos. 
-`summarize()` return void
+`public HashMap<String, Duration> synthesize(Project project)` 
 
-En la clase ExecutiveSynthesizer, el método summarize presenta la duración de cada
-iteración del proyecto imprimiendo el Objetivo y la Duración de cada una de ellas
-`summarize()` return void
+* Parámetro: `project` proyecto a sintetizar.
+
+* Devuelve: Un Hashmap con los objetivos y sus respectivos tiempos.
+
+3. En la clase ExecutiveSynthesizer, el método synthesize tiene la misma firma que el de estudiantes, pero devuelve el objetivo y la duración de cada una de las iteraciones del proyecto dado.
+
+
+###Diagramas de secuencia
+![](img/1.png);
+![](img/2.png);
+![](img/3.png);
+###Diagrama de clases
+![](img/4.png);
+
