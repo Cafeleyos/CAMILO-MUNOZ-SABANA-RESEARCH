@@ -26,8 +26,12 @@ public class Project {
         group.addProject(this);
     }
 
-    public void addMember(Student s) {
+    public void addMember(Student s) throws SabanaResearchException {
+        if(members.contains(s)){
+            throw new SabanaResearchException(SabanaResearchException.STUDENT_ALREADY_ADDED);
+        }
         members.add(s);
+
     }
     public void addIteration(Iteration iteration) {
         this.iterations.add(iteration);
@@ -48,6 +52,7 @@ public class Project {
     }
 
     public HashMap<String,Duration> summarize() throws SabanaResearchException {
+        System.out.println("\n"+"Summary of"+synthesizer.getClass().getSimpleName());
         for (String key: synthesizer.synthesize(this).keySet()){
             System.out.println(key + "---" +synthesizer.synthesize(this).get(key));
         }
