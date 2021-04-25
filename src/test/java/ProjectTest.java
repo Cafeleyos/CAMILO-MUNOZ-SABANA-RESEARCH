@@ -38,7 +38,7 @@ public class ProjectTest {
     public void setup() {
         setupStudents();
         setupWellFormedProject();
-        setupStudentProyect();
+        setupStudentProject();
         setupExecutiveProyect();
         setupBadFormedProject1();
         setupBadFormedProject2();
@@ -271,7 +271,7 @@ public class ProjectTest {
         DocumentedActivity documentedActivity2 = new DocumentedActivity(faker.team().name(), Activity.ACTIVE_STATE, iteration, activity2);
         documentedActivity2.addQuestion(new Question(Question.EASY_QUESTION, faker.team().name(), Duration.ofDays(1)));
     }
-    private void setupStudentProyect() {
+    private void setupStudentProject() {
 
         Group group = new Group(faker.team().name());
         studentSynthesizerProject = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
