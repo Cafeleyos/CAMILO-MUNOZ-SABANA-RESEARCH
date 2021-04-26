@@ -9,15 +9,17 @@
 
 La ocultación de información es aquello que nos permite controlar la visibilidad de las propiedades de los objetos por medio del modificador de acceso (en el caso de java) private, que se escribe al principio del atributo/método. Este únicamente permite el acceso a los métodos y atributos de la misma clase, permitiendo así, encapsular ciertos aspectos deseados que generaran una mayor confiabilidad y seguridad en el código al protegerse de cambios inesperados o descontrolados.
 
-## Diagrama de memoria
+## Memoria
 ![](img/m1.jpeg)
 ![](img/m2.jpeg)
-## Diagrama de Secuencia
+## Diseño
 ![](img/7.png)
 ## Bono
 ![](img/6.png)
 ###Evidencia
 ![](img/evidencias/1.png)
+![](img/evidencias/2.png)
+
 
 #Solución segundo  parcial 
 
@@ -68,4 +70,6 @@ errores. Lo que si podría mejorarse es el encapsulamiento de la clase Project, 
 la clase completa y no los arreglos necesarios. 
 
 ##Evidencias Bono
+![](img/evidencias/4.png)
+![](img/evidencias/3.png)
 

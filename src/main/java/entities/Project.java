@@ -59,10 +59,11 @@ public class Project {
     }
 
     public HashMap<String,Duration> summarize() throws SabanaResearchException {
-        System.out.println("\n"+"Summary of"+synthesizer.getClass().getSimpleName());
+        System.out.println("\n"+"Summary of "+synthesizer.getClass().getSimpleName()+"\n");
         for (String key: synthesizer.synthesize(this).keySet()){
             System.out.println(key + "---" +synthesizer.synthesize(this).get(key));
         }
+        System.out.println();
         return synthesizer.synthesize(this);
     }
 

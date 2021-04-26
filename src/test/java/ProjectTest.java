@@ -123,7 +123,6 @@ public class ProjectTest {
             System.out.println(e.getMessage());
         }
     }
-
     @Test
     @DisplayName("GIVEN a well formed project WHEN calling summarize to a Executive synthesizer THEN print it")
     public void shouldPrintExecutiveSummaryWhenWellFormedProjectIsGiven() {
