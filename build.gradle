@@ -2,6 +2,7 @@
 plugins {
     id 'java'
     id 'org.sonarqube' version '3.1.1'
+    id 'jacoco'
 }
 
 group 'sabana.poob'
@@ -33,5 +34,11 @@ sonarqube {
         property 'sonar.projectname', 'CAMILO-MUNOZ-SABANA-RESEARCH'
         property 'sonar.projectkey','sabana.poob:gradle-multimodule'
         property 'sonar.sourceEncoding', 'UTF-8'
+    }
+}
+
+jacocoTestReport{
+    reports{
+        xml.enabled true
     }
 }

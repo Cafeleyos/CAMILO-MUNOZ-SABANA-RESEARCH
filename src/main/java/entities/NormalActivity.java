@@ -8,7 +8,6 @@ import java.util.List;
 public class NormalActivity extends Activity {
 
     private List<Step> steps;
-    private Duration duration;
     private String state;
 
     public NormalActivity(String name, String state, Iteration iteration) {

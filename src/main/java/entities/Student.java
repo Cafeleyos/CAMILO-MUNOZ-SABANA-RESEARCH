@@ -7,7 +7,6 @@ public class Student {
     private String name;
     private int code;
     private String lastName;
-    private String email;
 
     public Student(String name, String lastName,int code,ArrayList<Activity> assignedActivities) {
         this.assignedActivities = assignedActivities;
