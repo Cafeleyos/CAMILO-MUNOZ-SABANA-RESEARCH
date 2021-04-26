@@ -14,7 +14,7 @@ La ocultación de información es aquello que nos permite controlar la visibilid
 ## Evidencia
 ![](img/evidencias/1.png)
 ![](img/evidencias/2.png)
-#Solución segundo  parcial 
+# Solución segundo  parcial 
 
 ## Conceptos
 ### ¿Cuáles son las acciones los tres momentos importantes de las excepciones? ¿Cuál es el objetivo de cada una? ¿Cómo se implementa en Java cada acción?.
