@@ -1,7 +1,7 @@
 # Solución Primer parcial
 ## Conceptos
 ### ¿Qué es encapsulamiento? ¿Qué ventajas ofrece?
-El encapsulamiento es una forma de ocultar el estado de un objeto para así, obligar su interacción por medio de métodos. Esto ofrece una protección ya que podemos definir que se puede o no hacer con estos, evitando modificaciones inesperadas, descontroladas o datos erróneos. Así mismo, permite realizar funciones internas que no necesitamos que el usuario de software conozca.
+El encapsulamiento es una forma de ocultar el estado de un objeto para así, obligar su interacción por medio de métodos. Esto ofrece una protección, ya que podemos definir que se puede o no hacer con estos, evitando modificaciones inesperadas, descontroladas o datos erróneos. Así mismo, permite realizar funciones internas que no necesitamos que el usuario de software conozca.
 ### ¿Qué es ocultación de información? ¿Por qué aplicarla? ¿Cómo se implementa en Java?
 La ocultación de información es aquello que nos permite controlar la visibilidad de las propiedades de los objetos por medio del modificador de acceso (en el caso de java) private, que se escribe al principio del atributo/método. Este únicamente permite el acceso a los métodos y atributos de la misma clase, permitiendo así, encapsular ciertos aspectos deseados que generaran una mayor confiabilidad y seguridad en el código al protegerse de cambios inesperados o descontrolados.
 ## Memoria
@@ -12,13 +12,13 @@ La ocultación de información es aquello que nos permite controlar la visibilid
 ## Bono
 ![](img/6.png)
 ## Evidencia
-![](img/evidencias/1.png)
-![](img/evidencias/2.png)
+![](img/Evidencias/1.png)
+![](img/Evidencias/2.png)
 # Solución segundo  parcial 
 
 ## Conceptos
 ### ¿Cuáles son las acciones los tres momentos importantes de las excepciones? ¿Cuál es el objetivo de cada una? ¿Cómo se implementa en Java cada acción?.
-Como primer momento, una excepción es lanzada utilizando la palabra reservada throw que romperá el código. Esta simplemente informara de manera local que se generó una excepción. Seguido, esta se propaga mediante la palabra reservada throws (se coloca después de definir los parámetros de un método) que sirve para que todos los métodos que lo llamen puedan tomar acciones respecto a esa excepción. Finalmente, se controla la excepción utilizando el comando try- catch que llamara al método o métodos deseados y controlara (imprimiendo la excepción, modificando algo en el método, etc) respectivamente.
+Como primer momento, una excepción es lanzada utilizando la palabra reservada throw que romperá el código. Esta simplemente informará de manera local que se generó una excepción. Seguido, esta se propaga mediante la palabra reservada throws (se coloca después de definir los parámetros de un método) que sirve para que todos los métodos que lo llamen puedan tomar acciones respecto a esa excepción. Finalmente, se controla la excepción utilizando el comando try- catch que llamara al método o métodos deseados y controlara (imprimiendo la excepción, modificando algo en el método, etc.) respectivamente.
 
 ### ¿Qué es sobre-escritura de métodos? ¿Por qué aplicarla? ¿Cómo impedir que se sobre-escriba un método?.
 La sobre escritura de métodos es un aspecto muy importante que aplica en el concepto de herencia. Pues consideramos que existe una clase padre que define ciertos atributos y métodos, de esta, una o varias clases pueden heredar tanto sus comportamientos como sus atributos dependiendo de los modificadores de acceso utilizados. Entonces, estos “hijos” pueden mantener el comportamiento de uno o varios métodos o pueden realizar una sobre escritura en algunos o todos ellos.
@@ -64,6 +64,6 @@ la clase completa y no los arreglos necesarios.
 
 ## Evidencias Bono
 
-![](img/evidencias/3.png)
-![](img/evidencias/4.png)
+![](img/Evidencias/3.png)
+![](img/Evidencias/4.png)
 
