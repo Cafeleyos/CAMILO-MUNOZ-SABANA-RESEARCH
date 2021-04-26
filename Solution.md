@@ -63,6 +63,7 @@ errores. Lo que si podría mejorarse es el encapsulamiento de la clase Project, 
 la clase completa y no los arreglos necesarios. 
 
 ## Evidencias Bono
+
 ![](img/evidencias/4.png)
 ![](img/evidencias/3.png)
 
