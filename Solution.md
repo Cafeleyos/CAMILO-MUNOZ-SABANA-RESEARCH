@@ -16,6 +16,8 @@ La ocultación de información es aquello que nos permite controlar la visibilid
 ![](img/7.png)
 ## Bono
 ![](img/6.png)
+###Evidencia
+![](img/evidencias/1.png)
 
 #Solución segundo  parcial 
 

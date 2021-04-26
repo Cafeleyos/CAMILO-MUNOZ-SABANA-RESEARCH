@@ -18,6 +18,10 @@ public class Summary {
         return activeProjects;
     }
 
+    public int getClosedProjects(){
+        return closedProjects;
+    }
+
     public LocalDate getDate() {
         return date;
     }

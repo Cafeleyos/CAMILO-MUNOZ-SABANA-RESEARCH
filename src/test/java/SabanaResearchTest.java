@@ -16,7 +16,7 @@ public class SabanaResearchTest {
     private List<Group> groups;
     private List<Project> projects;
     private List<Iteration> iterations;
-    private Project project;
+
 
     public SabanaResearchTest() {
         this.groups = new ArrayList<>();
@@ -54,6 +54,17 @@ public class SabanaResearchTest {
 
     }
 
+    @Test
+    @DisplayName("GIVEN sabana research WHEN open a project by dates and create summary THEN a new summary is created with also closed activities")
+    public void shouldCreateSummaryForOpenAndClosedProjects() {
+        this.projects.get(2).setDateEnd(LocalDate.now().plusDays(1));
+        Summary summary = sabanaResearch.createSummaryEntry();
+
+        assertNotNull(summary, "The summary should be created.");
+        assertNotNull(summary.getDate(), "Validate summary date.");
+        assertEquals(summary.getActiveProjects(), 2, "Validate number of active projects");
+        assertEquals(summary.getClosedProjects(), 3, "Validate number of closed projects");
+    }
 
 
 

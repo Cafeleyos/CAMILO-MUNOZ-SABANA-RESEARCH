@@ -44,7 +44,7 @@ public class NormalActivity extends Activity {
                 result = true;
             }
         }
-        if (state.equals(Activity.CANCELED_STATE)) {
+        if (state.equals(Activity.CLOSED_STATE)) {
             result = true;
         }
 
